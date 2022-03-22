@@ -10,7 +10,9 @@ const server = createServer(app);
 
 const PORT = process.env.PORT || 5000
 
-const io = new Server(server)
+const io = new Server(server, {
+    transports: ['websocket']
+})
 
 io.on('connection', (socket) => {
     socket.broadcast.emit('hi');
