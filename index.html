@@ -42,11 +42,11 @@
             }
         });
 
-        setInterval(() => {
+/*        setInterval(() => {
             for (let i = 0; i < 1000; i++) {
                 socket.emit('date', new Date())
             }
-        }, 1000)
+        }, 1000)*/
 
         socket.on('date', ({counter, date}) => {
             console.log(`${counter}: ${date}`);

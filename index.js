@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
 
     socket.on('date', (msg) => {
         console.log(msg)
-        socket.broadcast.emit('date', {counter, date: msg})
+        // socket.broadcast.emit('date', {counter, date: msg})
         // io.emit('date', {counter, msg})
     })
 
