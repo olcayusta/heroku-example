@@ -14,12 +14,24 @@ const io = new Server(server, {
     transports: ['websocket']
 })
 
+let counter = 0
+
 io.on('connection', (socket) => {
     socket.broadcast.emit('hi');
+
+    socket.on('date', (msg) => {
+        console.log(msg)
+        socket.broadcast.emit('date', {counter, date: msg})
+        // io.emit('date', {counter, msg})
+    })
 
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg);
     });
+
+    socket.on('disconnect', () => {
+
+    })
 })
 
 app.get('/', async (req, res) => {
