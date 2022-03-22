@@ -1,0 +1,23 @@
+{
+  "name": "heroku-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olcayusta/heroku-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olcayusta/heroku-example/issues"
+  },
+  "homepage": "https://github.com/olcayusta/heroku-example#readme"
+}
